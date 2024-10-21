@@ -8,7 +8,6 @@ const Account = new Schema (
         name: {type: String, required: true},
         email: {type: String, required: true},
         phoneNumber : {type: Number, required: false},
-        playlists: [{ type: Schema.Types.ObjectId, ref: 'Playlist' }]
 
     },
     {timestamps:true}
