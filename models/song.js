@@ -1,13 +1,15 @@
-const mongoose = require ('mongoose')
-const {schema} = require ('mongoose')
+const {Schema} = require('mongoose')
 
-const Song = new Schema (
+const songSchema = new Schema (
     {
         title: { type: String, required: true },
         artist: { type: String, required: true },
+        album: {type: String, required:true},
         genre: { type: String },
-        songFile: { type: String, required: true },
         uploadDate: { type: Date, default: Date.now },
+        explicit: {type: Boolean, required:true},
+        songFile: { type: String, required: false },
+        albumArt: {type: String, required: false},
         //mongoosejs.com for upload date
         // "searched mongoose model schema data type for date"
 
@@ -15,4 +17,4 @@ const Song = new Schema (
     {timestamps:true}
 )
 
-module.exports = mongoose.model ('songs',Song)
+module.exports = songSchema;
