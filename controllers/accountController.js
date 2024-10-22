@@ -54,7 +54,7 @@ const createAccount = async (req, res) => {
 const updateAccount = async (req,res) => {
     try {
         let {id} = req.params
-        let category = await Account.findByIdAndUpdate (id, req.body,{new:true})
+        let song = await Account.findByIdAndUpdate (id, req.body,{new:true})
         if (account) {
             return res.status(200).json(account)
         }

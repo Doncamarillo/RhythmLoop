@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    font-size: 16px; 
+    background-color: darkslategray;
+    color: white
+}
+
+header {
+    background-color: maroon;
+    padding: 15px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: maroon;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.playlist-box {
+    background-color: #ddd;
+    height: 80px;
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.song {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.song-details, .user-info, .user-playlists {
+    margin-bottom: 20px;
+}
+
+.song-cover {
+    background-color: #ddd;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.song-info, .song-lyrics, .credits {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-avatar {
+    background-color: #ddd;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.playlist {
+    background-color: #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1170px) {
+    body {
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .songs-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .song {
+        padding: 8px;
+    }
+
+    .playlist-box {
+        height: 70px;
+    }
+
+    .song-cover {
+        height: 120px;
+        width: 120px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

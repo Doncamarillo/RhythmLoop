@@ -51,7 +51,7 @@ const createSong = async (req, res) => {
 const updateSong = async (req,res) => {
     try {
         let {id} = req.params
-        let category = await Song.findByIdAndUpdate (id, req.body,{new:true})
+        let song = await Song.findByIdAndUpdate (id, req.body,{new:true})
         if (song) {
             return res.status(200).json(song)
         }

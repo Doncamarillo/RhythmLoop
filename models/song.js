@@ -11,6 +11,8 @@ const Song = new Schema (
         explicit: {type: Boolean, required:true},
         songFile: { type: String, required: false },
         albumArt: {type: String, required: false},
+        producer:{type:String, required: false},
+        writer: {type: String, required: false}
         //mongoosejs.com for upload date
         // "searched mongoose model schema data type for date"
 

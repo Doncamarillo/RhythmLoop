@@ -52,7 +52,7 @@ const createPlaylist = async (req, res) => {
 const updatePlaylist = async (req,res) => {
     try {
         let {id} = req.params
-        let category = await Playlist.findByIdAndUpdate (id, req.body,{new:true})
+        let song = await Playlist.findByIdAndUpdate (id, req.body,{new:true})
         if (playlist) {
             return res.status(200).json(playlist)
         }
