@@ -12,12 +12,12 @@ body {
     min-height: 100vh;
     justify-content: space-between;
     font-size: 16px; 
-    background-color: darkslategray;
+    background-color: rgb(0, 255, 221);
     color: white
 }
 
 header {
-    background-color: maroon;
+    background-color: rgb(37, 35, 35);
     padding: 15px;
     text-align: center;
 }
@@ -33,7 +33,7 @@ main {
 }
 
 footer {
-    background-color: maroon;
+    background-color: rgb(37, 35, 35);
     padding: 15px;
     text-align: center;
     position: sticky;
@@ -47,7 +47,7 @@ footer nav {
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 14px; 
 }
 
@@ -58,7 +58,7 @@ footer nav {
 }
 
 .playlist-box {
-    background-color: #ddd;
+    background-color: grey;
     height: 80px;
 }
 
@@ -69,7 +69,7 @@ footer nav {
 }
 
 .song {
-    background-color: #ccc;
+    background-color: #c29b9b;
     padding: 10px;
     text-align: center;
 }
