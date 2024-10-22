@@ -1,12 +1,13 @@
-const {Schema} = require('mongoose')
+const {Schema} = require('mongoose');
+const  mongoose = require('mongoose');
 
-const songSchema = new Schema (
+const Song = new Schema (
     {
         title: { type: String, required: true },
         artist: { type: String, required: true },
         album: {type: String, required:true},
         genre: { type: String },
-        uploadDate: { type: Date, default: Date.now },
+        uploadDate: { type: Date, default: Date.now, required:false },
         explicit: {type: Boolean, required:true},
         songFile: { type: String, required: false },
         albumArt: {type: String, required: false},
@@ -17,4 +18,4 @@ const songSchema = new Schema (
     {timestamps:true}
 )
 
-module.exports = songSchema;
+module.exports = Song;

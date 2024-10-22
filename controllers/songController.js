@@ -1,20 +1,20 @@
-const Song = require('../models/song')
+const {Song} = require('../models/')
 
-const getAllSongs = async (req,res) => {
+
+const getAllSongs = async (req, res) => {
     try {
-        const songs = await Song.find ()
+        const songs = await Song.find()
         res.json(songs)
     } catch (error) {
-        return res.status (500).send(error.message)
+        return res.status(500).send(error.message);
     }
-    }
-
+}
 const getSongById = async (req,res) => {
     try {
         const {id} = req.params
         const song = await Song.findById(id)
-        if (category) {
-            return res.json(category)
+        if (song) {
+            return res.json(song)
         }
         return res.status (404).send('Song does not exist')
     } catch (error) {
@@ -22,6 +22,20 @@ const getSongById = async (req,res) => {
     }
     
 }
+
+const getSongByTitle = async (req, res) => {
+    try { 
+        const song = await Song.find( {'title': req.params.title})
+        console.log(song)
+        if (song) {
+            return res.json(song);
+        }
+        return res.status(404).send('song not found');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+  }
+  
 const createSong = async (req, res) => {
     try {
         const song = await new Song(req.body)
@@ -63,6 +77,7 @@ const updateSong = async (req,res) => {
     module.exports = {
         getAllSongs,
         getSongById,
+        getSongByTitle,
         createSong,
         updateSong,
         deleteSong

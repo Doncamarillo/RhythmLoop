@@ -140,7 +140,7 @@ const main = async () => {
                 description: 'hits only !',
                 dateCreated: new Date (),
                 songs: [songs[0]._id,songs[2]._id,songs[9]._id],
-                accounts: [accounts[2]._id]
+                accounts: [accounts[0]._id]
             },
             {
                 name: 'Pop',

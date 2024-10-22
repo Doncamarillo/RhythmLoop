@@ -1,13 +1,16 @@
-const Account = require('../models/account')
+const {Account} = require('../models')
 
-const getAllAccounts = async (req,res) => {
+
+
+const getAllAccounts = async (req, res) => {
     try {
-        const accounts = await Account.find ()
+        const accounts = await Account.find()
         res.json(accounts)
     } catch (error) {
-        return res.status (500).send(error.message)
+        return res.status(500).send(error.message);
     }
-    }
+}
+
 
 const getAccountById = async (req,res) => {
     try {
@@ -22,6 +25,20 @@ const getAccountById = async (req,res) => {
     }
     
 }
+
+const getAccountByUsername = async (req, res) => {
+    try { 
+        const username = await Account.find( {'username': req.params.username})
+        console.log(username)
+        if (username) {
+            return res.json(username);
+        }
+        return res.status(404).send('username not found');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+  }
+  
 const createAccount = async (req, res) => {
     try {
         const account = await new Account(req.body)
@@ -63,6 +80,7 @@ const updateAccount = async (req,res) => {
     module.exports = {
         getAllAccounts,
         getAccountById,
+        getAccountByUsername,
         createAccount,
         updateAccount,
         deleteAccount

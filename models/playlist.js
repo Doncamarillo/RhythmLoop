@@ -8,8 +8,7 @@ const Playlist = new Schema (
     description: { type: String, required: false },
     dateCreated: { type: Date, default: Date.now },
     songs: [{ type: Schema.Types.ObjectId, ref: 'Song' }],
-    accounts: [{ type: Schema.Types.ObjectId, ref: 'Account'}]
-    
+    accounts: [{ type: Schema.Types.ObjectId, ref: 'Account',required:false}]
 
     },
     {timestamps:true}
