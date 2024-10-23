@@ -1,3 +1,5 @@
+//Pulling the API
+
 const getSongs = async () => {
     try {
         const response = await axios.get('http://localhost:3002/songs');
@@ -28,7 +30,10 @@ const getAccounts = async () => {
     }
 };
 
-// Call the functions
 getSongs();
 getPlaylists();
 getAccounts();
+
+
+
+

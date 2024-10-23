@@ -91,26 +91,26 @@ const main = async () => {
             username: 'doncamarillo',
             name: 'Don Camarillo',
             email: 'don_camarillo@gmail.com',
-            phoneNumber : 3105481264,
+            phoneNumber : '3105481264',
             },
             {
             username: 'KentaeviousSoto',
             name: 'Kentaevious Soto',
             email: 'mynba2kplayer@gmail.com',
-            phoneNumber : 6191523258,
+            phoneNumber : '6191523258',
     
             },
             {
             username: 'Jimniy_Cooks',
             name:'Aubrey Graham',
             email: 'nothingwasthesame@hotmail.com',
-            phoneNumber : 3235048564,
+            phoneNumber : '3235048564',
             },
             {
             username: 'NoShnacks',
             name: 'Brian Long',
             email:'NoShnacks123@gmail.com',
-            phoneNumber: 6548485652,
+            phoneNumber: '6548485652',
             }
         ]);
             const playlists = await Playlist.insertMany([

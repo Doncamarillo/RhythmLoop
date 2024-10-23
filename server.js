@@ -47,8 +47,8 @@ app.delete('/accounts/:id', accountController.deleteAccount);
 
 // Playlists
 app.get('/playlists', playlistController.getAllPlaylists);
-app.get('/playlist/name/:name', playlistController.getPlaylistByName);
-app.get('/playlist/:id', playlistController.getPlaylistById);
+app.get('/playlists/name/:name', playlistController.getPlaylistByName);
+app.get('/playlists/:id', playlistController.getPlaylistById);
 app.post('/playlists', playlistController.createPlaylist);
 app.put('/playlists/:id', playlistController.updatePlaylist);
 app.delete('/playlist/:id', playlistController.deletePlaylist);
