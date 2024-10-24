@@ -10,29 +10,26 @@
 </head>
 <body>
     <header>
-        <div class="logo">RhythmLoop</div>
-        <h3>Live with it</h3>
+        <div class="logo">
+            <img src="images/RhythmLoop Logo.png" style="width: 50px; height: 50px; border-radius: 30%;">
+        </div>
     </header>
-
     <main>
         <section class="song-details">
-            <div class="song-cover">Cover Image</div>
+            <div class="song-cover" id="song-cover"></div>
             <div class="song-info">
-                <h3>Title</h3>
-                <p>Artist</p>
-                <p>Genre</p>
+                <h3 id="song-title">Title</h3>
+                <p id="song-artist">Artist</p>
+                <p id="song-genre">Genre</p>
             </div>
             <div class="song-lyrics">
-                <h4>Lyrics (if added)</h4>
-                <p>...</p>
+                <h4>Lyrics</h4>
+                <p id="song-lyrics">No lyrics available</p>
+                <textarea id="user-lyrics" placeholder="Add your lyrics here"></textarea>
             </div>
-            <div class="credits">
-                <p>Producer</p>
-                <p>Writer</p>
-            </div>
+            
         </section>
     </main>
-
     <footer>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
